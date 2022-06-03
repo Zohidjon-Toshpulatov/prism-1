@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'WildWorld';
+  src: local(WildWorld), url(./assets/wild-world.otf) format('truetype');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'WildWorld', serif;
+}
+
+.main{
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+ .content a {
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+ }
+
+ .content span {
+   font-weight: 700;
+   color: black;
+   font-size: 16px;
+   line-height: 16px;
+ }
+
+ .content .bullet {
+   margin-right: 5px;
+   width: 16px;
+   height: 16px;
+   display: block;
+   /* padding: 0px 4px; */
+   border-radius: 50%;
+   background-color: #D64242;
+
+  
+ }
+ 
+ @keyframes glowing {
+   0% {
+     background-color: #A681C8;
+     box-shadow: 0 0 5px #A681C8;
+   }
+
+   50% {
+     background-color: #b85b5b;
+     box-shadow: 0 0 20px #D64242;
+   }
+
+   100% {
+     background-color: #D64242;
+     box-shadow: 0 0 5px #D64242;
+   }
+ }
+
+ .content .bullet{
+   animation: glowing 1300ms infinite;
+ }
+
+@media screen and (max-width: 600px) {
+  #myVideo {
+      display: none;
+    }
+  
+    #myMb {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  
+    .content {
+      position: absolute;
+      /* padding: 80px 0 0 90px; */
+      width: 90%;
+      /* height: 100%; */
+      top: 80px;
+      left: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    .content h1 {
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 48px;
+      text-transform: uppercase;
+  
+    }
+  
+    .content p {
+      font-size: 12px;
+      margin: 12px 0;
+      font-family: 400;
+    }
+  
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  width: 90%;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.content h1 {
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 90px;
+  text-transform: uppercase;
+
+}
+
+.content p {
+  font-size: 16px;
+  margin: 16px 0;
+  font-family: 400;
+}
