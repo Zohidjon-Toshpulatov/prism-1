@@ -63,9 +63,24 @@
    animation: glowing 1300ms infinite;
  }
 
+ @media screen and (max-width: 400px) {
+  #myVideo {
+      display: none;
+    }
+
+  .content h1 {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 28px;
+      text-transform: uppercase;
+  
+    }
+ }
+
 @media screen and (max-width: 600px) {
   #myVideo {
       display: none;
+
     }
   
     #myMb {
@@ -73,17 +88,15 @@
       right: 0;
       bottom: 0;
       min-width: 100%;
-      max-height: 100%;
-      object-fit: cover;
+      min-height: 100%;
+      object-fit:fill;
     }
   
     .content {
       position: absolute;
-      /* padding: 80px 0 0 90px; */
       width: 90%;
-      /* height: 100%; */
-      top: 80px;
-      left: 90px;
+      top: 50px;
+      left: 50px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -107,37 +120,43 @@
   
 }
 
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
 
-.content {
-  position: absolute;
-  width: 90%;
-  top: 50px;
-  left: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.content h1 {
-  font-weight: 500;
-  font-size: 90px;
-  line-height: 90px;
-  text-transform: uppercase;
-
-}
-
-.content p {
-  font-size: 16px;
-  margin: 16px 0;
-  font-family: 'Inter';
-  font-family: 400;
+@media screen and (min-width: 601px) {
+  #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  
+    
+        .content {
+          position: absolute;
+          /* padding: 80px 0 0 90px; */
+          width: 90%;
+          /* height: 100%; */
+          top: 80px;
+          left: 90px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+  
+    .content h1 {
+      font-weight: 500;
+      font-size: 90px;
+      line-height: 90px;
+      text-transform: uppercase;
+  
+    }
+  
+    .content p {
+      font-size: 16px;
+      margin: 16px 0;
+      font-family: 'Inter';
+      font-family: 400;
+    }
 }
